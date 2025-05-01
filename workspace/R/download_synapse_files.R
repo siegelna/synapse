@@ -6,13 +6,11 @@ if (!requireNamespace("synapser", quietly = TRUE)) {
 library(synapser)
 
 # This call initializes and logs in the `syn` object
-synLogin(
+synapser::synLogin(
   email = Sys.getenv("SYNAPSE_USERNAME"),
   authToken = Sys.getenv("SYNAPSE_APIKEY"),
   silent = TRUE
 )
-
-
 
 # Function to download files with metadata preservation
 download_synapse_files <- function(file_table, output_dir = "data") {
@@ -69,9 +67,3 @@ download_synapse_files <- function(file_table, output_dir = "data") {
     })
   }
 }
-
-# Execute download
-download_synapse_files(file_table, output_dir = "synapse_data")
-
-# Verify downloaded files
-list.files("synapse_data", recursive = TRUE, pattern = "\\.gz$")
