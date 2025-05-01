@@ -1,0 +1,30 @@
+name: sc-r-env
+channels:
+  - conda-forge
+  - defaults
+  - bioconda
+dependencies:
+  - python=3.10
+  - synapseclient=4.4.0
+  - pandas>=1.5,<=2.0.3
+  - numpy<=1.24.4
+  - r-base
+  - r-essentials
+  - r-devtools
+  - r-remotes
+  - r-seurat
+  - r-biocmanager
+  - r-reticulate
+  - r-rjson=0.2.21
+  - jinja2
+  - libgit2
+  - libcurl
+  - openssl
+  - libxml2
+  - fontconfig
+  - freetype
+  - libpng
+  - libtiff
+  - libjpeg-turbo
+  - hdf5
+  - radian
